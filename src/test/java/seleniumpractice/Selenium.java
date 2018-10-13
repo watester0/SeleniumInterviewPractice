@@ -13,11 +13,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -27,6 +28,7 @@ public class Selenium {
 	public static WebDriver driver;
 	public static Actions action;
 	public static Select select;
+	public static WebDriverWait wait;
 
 	public static String value = "how to resize a window in selenium";
 
@@ -86,6 +88,9 @@ public class Selenium {
 
 	@Test(priority = 5, groups = { "Facebook" })
 	public void enterUserId() {
+		driver.navigate().to("https://www.facebook.com");
+		wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.titleContains("Facebook – log in or sign up"));
 		driver.findElement(By.id("email")).sendKeys("mdwaseeem6666@gmail.com");
 	}
 
@@ -94,6 +99,7 @@ public class Selenium {
 																									// groups invoked
 																									// before it
 	public void enterPassword() {
+		driver.navigate().to("https://www.facebook.com");
 		driver.findElement(By.id("pass")).sendKeys("soltex123");
 	}
 
@@ -102,6 +108,8 @@ public class Selenium {
 																// seleniumpractice.RetryAnalyzer2.class--->
 	@Parameters("mail")
 	public void clickOnLoginBtn(String email) {
+
+		driver.navigate().to("https://www.facebook.com");
 		driver.findElement(By.id("email")).sendKeys(email);
 		driver.findElement(By.id("u_0_2")).submit();
 		System.out.println("Btn element not found");
@@ -112,8 +120,8 @@ public class Selenium {
 		File srcfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		if (ITestResult.FAILURE == result.getStatus()) {
 			try {
-				FileUtils.copyFile(srcfile, new File("D:\\Automation\\Practice\\Soltex\\Practice\\screenshots\\-"
-						+ result.getName() + ".png"));
+				FileUtils.copyFile(srcfile, new File(
+						"D:\\Automation\\Practice\\Soltex\\Practice\\screenshots\\-" + result.getName() + ".png"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

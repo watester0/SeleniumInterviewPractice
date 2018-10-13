@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ExtentReport Suite">
+
+	<listeners>
+		<listener class-name="com.ExtentReportListener.ExtentReportListener" />
+		<!-- <listener class-name="seleniumpractice.Log4jTest">
+			<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+		</listener> -->
+	</listeners>
+
+
+	<test name="ExtentReportTest">
+
+		<classes>
+
+		<!-- 	<class name="seleniumpractice.Selenium" /> -->
+				<class name="seleniumpractice.Log4jTest" />
+
+
+		</classes>
+
+	</test>
+
+
+</suite>

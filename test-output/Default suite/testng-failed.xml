@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumpractice.Selenium">
+      <class name="seleniumpractice.Log4jTest">
         <methods>
+          <include name="upperCase"/>
           <include name="setUp"/>
-          <include name="enterPassword"/>
-          <include name="enterUserId"/>
         </methods>
-      </class> <!-- seleniumpractice.Selenium -->
+      </class> <!-- seleniumpractice.Log4jTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [ExceptionTestSuite]">
-  <test thread-count="5" name="ExceptionTest(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumpractice.Selenium">
+      <class name="seleniumpractice.Log4jTest">
         <methods>
-          <include name="setUp"/>
-          <include name="enterPassword"/>
-          <include name="windowResize"/>
-          <include name="selectElementWithSameLocator"/>
-          <include name="enterUserId"/>
           <include name="upperCase"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- seleniumpractice.Selenium -->
+      </class> <!-- seleniumpractice.Log4jTest -->
     </classes>
-  </test> <!-- ExceptionTest(failed) -->
-</suite> <!-- Failed suite [ExceptionTestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
