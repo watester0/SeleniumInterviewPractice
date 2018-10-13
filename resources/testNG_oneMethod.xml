@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallal Test Suite" thread-count="3" parallel="methods">
+	<test name="Parallal Testing">
+
+
+		<classes>
+			<class name="seleniumpractice.Selenium">
+				<methods>
+					<include name="selectElementWithSameLocator"></include>
+				</methods>
+				<!-- <include value="upperCase" dependsOnMethod="windowResize"/> <include 
+					value="windowResize"/> -->
+			</class>
+		</classes>
+	</test>
+</suite>

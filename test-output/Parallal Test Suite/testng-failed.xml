@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Parallal Test Suite]" parallel="methods">
+  <test thread-count="3" name="Parallal Testing(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="Google"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="seleniumpractice.Selenium">
+        <methods>
+          <include name="windowResize"/>
+          <include name="rightClick"/>
+        </methods>
+      </class> <!-- seleniumpractice.Selenium -->
+    </classes>
+  </test> <!-- Parallal Testing(failed) -->
+</suite> <!-- Failed suite [Parallal Test Suite] -->

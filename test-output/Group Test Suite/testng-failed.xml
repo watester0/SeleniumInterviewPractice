@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Group Test Suite]">
+  <test thread-count="5" name="Group Testing(failed)">
+    <groups>
+      <run>
+        <include name="Google"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="seleniumpractice.Selenium">
+        <methods>
+          <include name="windowResize"/>
+          <include name="rightClick"/>
+          <include name="upperCase"/>
+        </methods>
+      </class> <!-- seleniumpractice.Selenium -->
+    </classes>
+  </test> <!-- Group Testing(failed) -->
+</suite> <!-- Failed suite [Group Test Suite] -->
