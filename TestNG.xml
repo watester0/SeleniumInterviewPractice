@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="ExtentReport Suite">
+<suite name="Extent Report Test Suite">
 
 	<listeners>
-		<listener class-name="com.ExtentReportListener.ExtentReportListener" />
-		<!-- <listener class-name="seleniumpractice.Log4jTest">
-			<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-		</listener> -->
+
+
+		<listener class-name="com.ExtentReportListener.ExtentListenerClass"></listener>
 	</listeners>
 
 
-	<test name="ExtentReportTest">
+	<test name="ExtentReportTest 2">
 
 		<classes>
-
-		<!-- 	<class name="seleniumpractice.Selenium" /> -->
-				<class name="seleniumpractice.Log4jTest" />
-
+			<class name="seleniumpractice.Log4jTest" />
 
 		</classes>
 

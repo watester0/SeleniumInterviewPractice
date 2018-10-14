@@ -11,8 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Log4jTest {
-	
+import com.ExtentReportListener.ExtentListenerClass;
+
+public class Log4jTest extends ExtentListenerClass {
+
 	public static WebDriver driver;
 	public static Actions action;
 	public static Select select;
@@ -26,12 +28,15 @@ public class Log4jTest {
 		 * System.setProperty("webdriver.gecko.driver",
 		 * "D:\\Automation\\Practice\\jars\\geckodriver.exe"); driver =new
 		 * FirefoxDriver();
+		 * 
+		 *
 		 */
 		System.setProperty("webdriver.chrome.driver", "D:\\Automation\\Practice\\jars\\chromedriver.exe");
 		driver = new ChromeDriver();
+
 		driver.get("https://www.google.com");
-		driver.manage().window().maximize();
-		// driver.manage().window().fullscreen();
+		driver.manage().window().maximize(); //
+		driver.manage().window().fullscreen();
 
 		action = new Actions(driver);
 

@@ -2,62 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18036" started-at="2018-10-13T22:45:43Z" finished-at="2018-10-13T22:46:01Z">
+  <suite name="Default suite" duration-ms="17343" started-at="2018-10-14T18:19:16Z" finished-at="2018-10-14T18:19:34Z">
     <groups>
-      <group name="Google">
-        <method signature="Log4jTest.upperCase()[pri:0, instance:seleniumpractice.Log4jTest@42d80b78]" name="upperCase" class="seleniumpractice.Log4jTest"/>
-      </group> <!-- Google -->
     </groups>
-    <test name="Default test" duration-ms="18036" started-at="2018-10-13T22:45:43Z" finished-at="2018-10-13T22:46:01Z">
-      <class name="seleniumpractice.Log4jTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:seleniumpractice.Log4jTest@42d80b78]" name="setUp" is-config="true" duration-ms="17943" started-at="2018-10-13T22:45:43Z" finished-at="2018-10-13T22:46:01Z">
+    <test name="Default test" duration-ms="17343" started-at="2018-10-14T18:19:16Z" finished-at="2018-10-14T18:19:34Z">
+      <class name="seleniumpractice.Example2">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:seleniumpractice.Example2@6a4f787b]" name="setUp" is-config="true" duration-ms="15881" started-at="2018-10-14T18:19:16Z" finished-at="2018-10-14T18:19:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="upperCase()[pri:0, instance:seleniumpractice.Log4jTest@42d80b78]" name="upperCase" duration-ms="54" started-at="2018-10-13T22:46:01Z" finished-at="2018-10-13T22:46:01Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"gs_htif0"}
-  (Session info: chrome=70.0.3538.54)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-0O7QH13', ip: '192.168.171.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\home\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.54, webStorageEnabled: true}
-Session ID: 1680c2c68abf0c294bd44f5b6f9e730e
-*** Element info: {Using=id, value=gs_htif0}]]>
-            </message>
+        <test-method status="FAIL" signature="checkSameObjectLocators()[pri:0, instance:seleniumpractice.Example2@6a4f787b]" name="checkSameObjectLocators" duration-ms="101" started-at="2018-10-14T18:19:32Z" finished-at="2018-10-14T18:19:32Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"gs_htif0"}
-  (Session info: chrome=70.0.3538.54)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-0O7QH13', ip: '192.168.171.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\home\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.54, webStorageEnabled: true}
-Session ID: 1680c2c68abf0c294bd44f5b6f9e730e
-*** Element info: {Using=id, value=gs_htif0}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-at seleniumpractice.Log4jTest.upperCase(Log4jTest.java:43)
+              <![CDATA[java.lang.NullPointerException
+at seleniumpractice.Example2.checkSameObjectLocators(Example2.java:51)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,11 +43,22 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- upperCase -->
-      </class> <!-- seleniumpractice.Log4jTest -->
+        </test-method> <!-- checkSameObjectLocators -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:seleniumpractice.Example2@6a4f787b]" name="tearDown" is-config="true" duration-ms="1291" started-at="2018-10-14T18:19:32Z" finished-at="2018-10-14T18:19:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkSameObjectLocators status=FAILURE method=Example2.checkSameObjectLocators()[pri:0, instance:seleniumpractice.Example2@6a4f787b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- seleniumpractice.Example2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

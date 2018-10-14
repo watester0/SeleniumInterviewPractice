@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
@@ -22,14 +24,19 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.ExtentReportListener.ExtentListenerClass;
 
-public class Selenium {
+
+public class Selenium extends ExtentListenerClass{
 
 	public static WebDriver driver;
 	public static Actions action;
 	public static Select select;
 	public static WebDriverWait wait;
-
+	public static Alert alert;
+	public static JavascriptExecutor jsexe;
+	
+	
 	public static String value = "how to resize a window in selenium";
 
 	@BeforeMethod
@@ -69,6 +76,8 @@ public class Selenium {
 	public void rightClick() {
 		WebElement element = driver.findElement(By.xpath("//*[@id=\"gbw\"]/div/div/div[1]/div[1]/a"));
 		action.contextClick(element).build().perform();
+		
+	
 	}
 
 	// ************************************************//
@@ -76,8 +85,12 @@ public class Selenium {
 	@Test(priority = 4, groups = { "Facebook", "FB" })
 	public void selectElementWithSameLocator() throws InterruptedException {
 		driver.navigate().to("https://www.facebook.com");
-		WebElement element = driver.findElement(By.xpath("//*[@id=\"month\"]"));
+		WebElement element = driver.findElement(By.xpath("//*[@id=\'month\']"));
 		select = new Select((element));
+		java.util.List<WebElement> op=select.getOptions();
+		for (int i=0;i<op.size();i++) {
+			op.get(i).getText();
+		}
 		select.selectByIndex(10);
 		Thread.sleep(3000);
 		select.selectByValue("4");
@@ -92,6 +105,9 @@ public class Selenium {
 		wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.titleContains("Facebook – log in or sign up"));
 		driver.findElement(By.id("email")).sendKeys("mdwaseeem6666@gmail.com");
+		jsexe=(JavascriptExecutor)driver;
+		jsexe.executeScript("", "");
+		
 	}
 
 	@Test(priority = 6, dependsOnMethods = { "enterUserId" }, dependsOnGroups = { "Facebook.*" }) // "Facebook.*"---means
@@ -113,6 +129,21 @@ public class Selenium {
 		driver.findElement(By.id("email")).sendKeys(email);
 		driver.findElement(By.id("u_0_2")).submit();
 		System.out.println("Btn element not found");
+		
+		
+	}
+	
+	@Test
+	public boolean isAlertPresent() {
+		try {
+			alert=driver.switchTo().alert();
+			alert.getText();
+			alert.sendKeys(null);
+			return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	@AfterMethod
@@ -128,4 +159,6 @@ public class Selenium {
 		}
 		driver.quit();
 	}
+	
+	
 }
